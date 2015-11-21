@@ -1,0 +1,78 @@
+---
+title       : Costing of Surgical Site Infection  
+subtitle    : How Much Can We Pay to Implement Infection Control Program?
+author      : Ghada Abu Sheasha,Lecturer of Biomedical Informatics & Medical Statistics
+job         : Medical Research Institute, Alexandria University
+framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Background
+
+  Surgical site infection (SSI) carries an enormous clinical and economic burden. The good news is that up to 35% of surgical wound infections could be prevented by an effective infection control programs.However, infection control programs (ICPs) are costly themselves.
+
+  Decisions, such as "Is it worthy to implement infection control measures?" and "How much resources can be utilized for this purpose?" are critical and should be informed. 
+  
+## Aim of the work
+
+The aim of this calculator is helping policymakers to figure out how much they can allocate to implement an infection control program with a known efficacy in their hospitals; and to predict, in advance, the expected consequences of its implementation.
+
+
+
+--- 
+
+## How to use the calculator
+
+This calculator is formed of two tabs. 
+
+The  **first tab**  calculated the expected number of patients with surgical site infection(SSI) and the expected total cost paid by the hospital to treat them.
+
+You have to feed four cells in the first tab
+
+The first two cells are filled by data from the hospital surveillance system.
+
+First cell: Enter the *total number of surgical patients* 
+
+Second cell:Enter *the number of patients developed surgical site infection* 
+
+Third cell:Enter *the expected number of surgical patients admitted to the hospital*; e.g., 1,000 surgical patients.
+
+Forth cell: enter *the number of simulations*;e.g.,  recommended 10,000.
+
+--- 
+
+## How to use the calculator
+
+The data filled in the **second tab** is related to the infection control program (ICP).
+
+Enter *the cost of ICP per patient* in the first cell on the right. If the cost of ICP is not known per patient, then divide the total cost of the ICP by the number of the surgical patients you entered in the third cell on the first tab.
+
+Select *the expected efficacy* of the ICP using the slide bar on the right. It ranges from zero (no efficacy at all) to 1 (the ICP can prevent the occurrence of all the cases of surgical site infection). If you select 0.20, this means the ICP can reduced the number of surgical site infection by 20%.
+
+---
+
+
+## Output of the calculator
+
+
+In **the first tab**, we present the expected total cost the hospital will pay to treat the patients with SSI. We used the Burr distribution (shape1=0.21385, shape2=4.1144,scale=60.365) from a related sutudy to predict the cost of SSI per patient
+ 
+
+
+```r
+  rburr(1, shape1=0.21385, shape2=4.1144,scale=60.365)
+```
+
+```
+## [1] 119.5584
+```
+
+In **the second tab**, we present the *expected savings resulting form implementing the ICP* is shown
+
+
+
+

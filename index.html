@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Costing of Surgical Site Infection</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Costing of Surgical Site Infection">
+  <meta name="author" content="Ghada Abu Sheasha,Lecturer of Biomedical Informatics &amp; Medical Statistics">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Costing of Surgical Site Infection</h1>
+    <h2>How Much Can We Pay to Implement Infection Control Program?</h2>
+    <p>Ghada Abu Sheasha,Lecturer of Biomedical Informatics &amp; Medical Statistics<br/>Medical Research Institute, Alexandria University</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Surgical site infection (SSI) carries an enormous clinical and economic burden. The good news is that up to 35% of surgical wound infections could be prevented by an effective infection control programs.However, infection control programs (ICPs) are costly themselves.</p>
+
+<p>Decisions, such as &quot;Is it worthy to implement infection control measures?&quot; and &quot;How much resources can be utilized for this purpose?&quot; are critical and should be informed. </p>
+
+<h2>Aim of the work</h2>
+
+<p>The aim of this calculator is helping policymakers to figure out how much they can allocate to implement an infection control program with a known efficacy in their hospitals; and to predict, in advance, the expected consequences of its implementation.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How to use the calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This calculator is formed of two tabs. </p>
+
+<p>The  <strong>first tab</strong>  calculated the expected number of patients with surgical site infection(SSI) and the expected total cost paid by the hospital to treat them.</p>
+
+<p>You have to feed four cells in the first tab</p>
+
+<p>The first two cells are filled by data from the hospital surveillance system.</p>
+
+<p>First cell: Enter the <em>total number of surgical patients</em> </p>
+
+<p>Second cell:Enter <em>the number of patients developed surgical site infection</em> </p>
+
+<p>Third cell:Enter <em>the expected number of surgical patients admitted to the hospital</em>; e.g., 1,000 surgical patients.</p>
+
+<p>Forth cell: enter <em>the number of simulations</em>;e.g.,  recommended 10,000.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>How to use the calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data filled in the <strong>second tab</strong> is related to the infection control program (ICP).</p>
+
+<p>Enter <em>the cost of ICP per patient</em> in the first cell on the right. If the cost of ICP is not known per patient, then divide the total cost of the ICP by the number of the surgical patients you entered in the third cell on the first tab.</p>
+
+<p>Select <em>the expected efficacy</em> of the ICP using the slide bar on the right. It ranges from zero (no efficacy at all) to 1 (the ICP can prevent the occurrence of all the cases of surgical site infection). If you select 0.20, this means the ICP can reduced the number of surgical site infection by 20%.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Output of the calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In <strong>the first tab</strong>, we present the expected total cost the hospital will pay to treat the patients with SSI. We used the Burr distribution (shape1=0.21385, shape2=4.1144,scale=60.365) from a related sutudy to predict the cost of SSI per patient</p>
+
+<pre><code class="r">  rburr(1, shape1=0.21385, shape2=4.1144,scale=60.365)
+</code></pre>
+
+<pre><code>## [1] 119.5584
+</code></pre>
+
+<p>In <strong>the second tab</strong>, we present the <em>expected savings resulting form implementing the ICP</em> is shown</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How to use the calculator'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How to use the calculator'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Output of the calculator'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
